@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.ops4j.pax.logging:pax-logging-api:1.10.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.pax.logging/pax-logging-api/1.10.1/38413000a17c133607de8fddd461fc5240b78241/pax-logging-api-1.10.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.pax.logging/pax-logging-api/1.10.1/a3d91f0a0a81b3d76fc1fef40e130d3895eb9462/pax-logging-api-1.10.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.felix:org.apache.felix.fileinstall:3.6.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.felix/org.apache.felix.fileinstall/3.6.4/72322a8a8cce72e3326387cb7d98f58b3ba4d3bc/org.apache.felix.fileinstall-3.6.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.felix/org.apache.felix.fileinstall/3.6.4/350913a263a2454f3026908f837ef77ecd8c77f8/org.apache.felix.fileinstall-3.6.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

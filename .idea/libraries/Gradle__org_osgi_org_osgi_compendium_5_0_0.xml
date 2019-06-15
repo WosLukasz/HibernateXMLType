@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.osgi:org.osgi.compendium:5.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.osgi/org.osgi.compendium/5.0.0/9d7a9c35591f6fa1c98ac85af32775c12361aee4/org.osgi.compendium-5.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.osgi/org.osgi.compendium/5.0.0/3f5760f4c64374f86e4071adae75e0db055eec84/org.osgi.compendium-5.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.ops4j.pax.exam:pax-exam:4.12.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.pax.exam/pax-exam/4.12.0/3f6c1fe0ad310b5c9d3be65b107d612de21d80c3/pax-exam-4.12.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.pax.exam/pax-exam/4.12.0/aa34c12fa753152ab64f27c326e16a3cab9f8156/pax-exam-4.12.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

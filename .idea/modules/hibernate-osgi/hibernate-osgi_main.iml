@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":hibernate-osgi:main" external.linked.project.path="$MODULE_DIR$/../../../hibernate-osgi" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="org.hibernate" external.system.module.type="sourceSet" external.system.module.version="5.4.2.Final" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../../hibernate-osgi/out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../hibernate-osgi/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../../hibernate-osgi/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../hibernate-osgi/src/main/resources" type="java-resource" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../hibernate-osgi/target/generated-src/apt/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../../hibernate-osgi/target/generated-src/apt/main" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="hibernate-core_main" />
+    <orderEntry type="library" name="Gradle: org.hibernate.common:hibernate-commons-annotations:5.1.0.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.logging:jboss-logging:3.3.2.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.osgi:org.osgi.core:6.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.osgi:org.osgi.compendium:5.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy:1.9.10" level="project" />
+    <orderEntry type="library" name="Gradle: antlr:antlr:2.7.7" level="project" />
+    <orderEntry type="library" name="Gradle: javax.persistence:javax.persistence-api:2.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.javassist:javassist:3.24.0-GA" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.interceptor:javax.interceptor-api:1.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:1.1.1.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss:jandex:2.0.5.Final" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml:classmate:1.3.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.dom4j:dom4j:2.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.logging:jboss-logging-annotations:2.1.0.Final" level="project" />
+  </component>
+</module>

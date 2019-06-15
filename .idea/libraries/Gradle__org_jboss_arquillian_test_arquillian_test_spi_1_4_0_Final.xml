@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jboss.arquillian.test:arquillian-test-spi:1.4.0.Final">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.arquillian.test/arquillian-test-spi/1.4.0.Final/4547e2abc5b24984f154033ee5c06f4a1afae8e7/arquillian-test-spi-1.4.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.arquillian.test/arquillian-test-spi/1.4.0.Final/b61376c9e3d8482ec2ee454fc96ab80cf7c50095/arquillian-test-spi-1.4.0.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.ops4j.pax.swissbox:pax-swissbox-tracker:1.8.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.pax.swissbox/pax-swissbox-tracker/1.8.2/699d52d350f2377b30a1927a52c4b43ca4d8e5c5/pax-swissbox-tracker-1.8.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.pax.swissbox/pax-swissbox-tracker/1.8.2/465d0e180d1d8bc26c7ddb6c7082059f43e2eb73/pax-swissbox-tracker-1.8.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

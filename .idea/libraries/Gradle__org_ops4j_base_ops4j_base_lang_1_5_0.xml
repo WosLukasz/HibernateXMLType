@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.ops4j.base:ops4j-base-lang:1.5.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.base/ops4j-base-lang/1.5.0/da31d176ffa8b78c0b83e183951c86cbd7bfb0b9/ops4j-base-lang-1.5.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.base/ops4j-base-lang/1.5.0/50c2e7084f6433336eb7e0a93b0d10fb280a0238/ops4j-base-lang-1.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

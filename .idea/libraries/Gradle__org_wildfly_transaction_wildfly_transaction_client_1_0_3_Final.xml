@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.wildfly.transaction:wildfly-transaction-client:1.0.3.Final">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.wildfly.transaction/wildfly-transaction-client/1.0.3.Final/eb2b190c25f5a1e43246401926d5002636af4cb5/wildfly-transaction-client-1.0.3.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.wildfly.transaction/wildfly-transaction-client/1.0.3.Final/becd0a9d3150df02a158fcd9e52473d907295956/wildfly-transaction-client-1.0.3.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

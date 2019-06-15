@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.wildfly:wildfly-naming-client:1.0.4.Final">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.wildfly/wildfly-naming-client/1.0.4.Final/af78c07f84aa0f8af1376b299bc1843eec23d5f1/wildfly-naming-client-1.0.4.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.wildfly/wildfly-naming-client/1.0.4.Final/2846418ba9a4075a2c610e7662a89aa75b8431f8/wildfly-naming-client-1.0.4.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

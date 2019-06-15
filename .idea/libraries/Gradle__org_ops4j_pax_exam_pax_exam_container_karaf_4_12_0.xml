@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.ops4j.pax.exam:pax-exam-container-karaf:4.12.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.pax.exam/pax-exam-container-karaf/4.12.0/e41815381943ce190e602155dc9023ae59b2ec9e/pax-exam-container-karaf-4.12.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.pax.exam/pax-exam-container-karaf/4.12.0/e3072617ba550bf1145844ade7b3628d830154b0/pax-exam-container-karaf-4.12.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

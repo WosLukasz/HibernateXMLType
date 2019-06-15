@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="buildSrc_main" target="1.9" />
+      <module name="buildSrc_test" target="1.9" />
+      <module name="documentation_main" target="1.8" />
+      <module name="documentation_test" target="1.8" />
+      <module name="hibernate-agroal_main" target="1.8" />
+      <module name="hibernate-agroal_test" target="1.8" />
+      <module name="hibernate-c3p0_main" target="1.8" />
+      <module name="hibernate-c3p0_test" target="1.8" />
+      <module name="hibernate-core_main" target="1.8" />
+      <module name="hibernate-core_test" target="1.8" />
+      <module name="hibernate-ehcache_main" target="1.8" />
+      <module name="hibernate-ehcache_test" target="1.8" />
+      <module name="hibernate-enhance-maven-plugin_main" target="1.8" />
+      <module name="hibernate-enhance-maven-plugin_test" target="1.8" />
+      <module name="hibernate-entitymanager_main" target="1.8" />
+      <module name="hibernate-entitymanager_test" target="1.8" />
+      <module name="hibernate-envers_main" target="1.8" />
+      <module name="hibernate-envers_test" target="1.8" />
+      <module name="hibernate-gradle-plugin_main" target="1.8" />
+      <module name="hibernate-gradle-plugin_test" target="1.8" />
+      <module name="hibernate-hikaricp_main" target="1.8" />
+      <module name="hibernate-hikaricp_test" target="1.8" />
+      <module name="hibernate-java8_main" target="1.8" />
+      <module name="hibernate-java8_test" target="1.8" />
+      <module name="hibernate-jcache_main" target="1.8" />
+      <module name="hibernate-jcache_test" target="1.8" />
+      <module name="hibernate-jipijapa_main" target="1.8" />
+      <module name="hibernate-jipijapa_test" target="1.8" />
+      <module name="hibernate-jpamodelgen_main" target="1.8" />
+      <module name="hibernate-jpamodelgen_test" target="1.8" />
+      <module name="hibernate-orm-modules_main" target="1.9" />
+      <module name="hibernate-orm-modules_test" target="1.9" />
+      <module name="hibernate-osgi_main" target="1.8" />
+      <module name="hibernate-osgi_test" target="1.8" />
+      <module name="hibernate-proxool_main" target="1.8" />
+      <module name="hibernate-proxool_test" target="1.8" />
+      <module name="hibernate-spatial_main" target="1.8" />
+      <module name="hibernate-spatial_test" target="1.8" />
+      <module name="hibernate-testing_main" target="1.8" />
+      <module name="hibernate-testing_test" target="1.8" />
+      <module name="hibernate-vibur_main" target="1.8" />
+      <module name="hibernate-vibur_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

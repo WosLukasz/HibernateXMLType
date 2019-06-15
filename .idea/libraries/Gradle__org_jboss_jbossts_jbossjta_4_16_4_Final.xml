@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jboss.jbossts:jbossjta:4.16.4.Final">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.jbossts/jbossjta/4.16.4.Final/11c929d01a67d9bece10783e125461e0ed3742ff/jbossjta-4.16.4.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.jbossts/jbossjta/4.16.4.Final/f4b852062a907ce3102ae5a11b5253d01532914d/jbossjta-4.16.4.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.ops4j.pax.swissbox:pax-swissbox-framework:1.8.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.pax.swissbox/pax-swissbox-framework/1.8.2/bd7ca533bd2861bb3e9b433537d63dea3a23a55b/pax-swissbox-framework-1.8.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.pax.swissbox/pax-swissbox-framework/1.8.2/bf6c15f968fab6378e97cb39a70e444766326402/pax-swissbox-framework-1.8.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ibm.informix:jdbc:4.10.12">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ibm.informix/jdbc/4.10.12/9be26ed8f8daf0013e4b8b371415a875e244054a/jdbc-4.10.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ibm.informix/jdbc/4.10.12/778508f2c5dc5dbf75f6c53b380dce4fcca7de16/jdbc-4.10.12-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

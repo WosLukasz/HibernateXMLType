@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc_main.iml" group="buildSrc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc_test.iml" group="buildSrc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/documentation/documentation.iml" filepath="$PROJECT_DIR$/.idea/modules/documentation/documentation.iml" group="documentation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/documentation/documentation_main.iml" filepath="$PROJECT_DIR$/.idea/modules/documentation/documentation_main.iml" group="documentation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/documentation/documentation_test.iml" filepath="$PROJECT_DIR$/.idea/modules/documentation/documentation_test.iml" group="documentation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-agroal/hibernate-agroal.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-agroal/hibernate-agroal.iml" group="hibernate-agroal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-agroal/hibernate-agroal_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-agroal/hibernate-agroal_main.iml" group="hibernate-agroal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-agroal/hibernate-agroal_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-agroal/hibernate-agroal_test.iml" group="hibernate-agroal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-c3p0/hibernate-c3p0.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-c3p0/hibernate-c3p0.iml" group="hibernate-c3p0" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-c3p0/hibernate-c3p0_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-c3p0/hibernate-c3p0_main.iml" group="hibernate-c3p0" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-c3p0/hibernate-c3p0_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-c3p0/hibernate-c3p0_test.iml" group="hibernate-c3p0" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-core/hibernate-core.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-core/hibernate-core.iml" group="hibernate-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-core/hibernate-core_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-core/hibernate-core_main.iml" group="hibernate-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-core/hibernate-core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-core/hibernate-core_test.iml" group="hibernate-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-ehcache/hibernate-ehcache.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-ehcache/hibernate-ehcache.iml" group="hibernate-ehcache" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-ehcache/hibernate-ehcache_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-ehcache/hibernate-ehcache_main.iml" group="hibernate-ehcache" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-ehcache/hibernate-ehcache_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-ehcache/hibernate-ehcache_test.iml" group="hibernate-ehcache" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tooling/hibernate-enhance-maven-plugin/hibernate-enhance-maven-plugin.iml" filepath="$PROJECT_DIR$/.idea/modules/tooling/hibernate-enhance-maven-plugin/hibernate-enhance-maven-plugin.iml" group="hibernate-enhance-maven-plugin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tooling/hibernate-enhance-maven-plugin/hibernate-enhance-maven-plugin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tooling/hibernate-enhance-maven-plugin/hibernate-enhance-maven-plugin_main.iml" group="hibernate-enhance-maven-plugin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tooling/hibernate-enhance-maven-plugin/hibernate-enhance-maven-plugin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tooling/hibernate-enhance-maven-plugin/hibernate-enhance-maven-plugin_test.iml" group="hibernate-enhance-maven-plugin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-entitymanager/hibernate-entitymanager.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-entitymanager/hibernate-entitymanager.iml" group="hibernate-entitymanager" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-entitymanager/hibernate-entitymanager_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-entitymanager/hibernate-entitymanager_main.iml" group="hibernate-entitymanager" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-entitymanager/hibernate-entitymanager_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-entitymanager/hibernate-entitymanager_test.iml" group="hibernate-entitymanager" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-envers/hibernate-envers.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-envers/hibernate-envers.iml" group="hibernate-envers" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-envers/hibernate-envers_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-envers/hibernate-envers_main.iml" group="hibernate-envers" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-envers/hibernate-envers_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-envers/hibernate-envers_test.iml" group="hibernate-envers" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tooling/hibernate-gradle-plugin/hibernate-gradle-plugin.iml" filepath="$PROJECT_DIR$/.idea/modules/tooling/hibernate-gradle-plugin/hibernate-gradle-plugin.iml" group="hibernate-gradle-plugin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tooling/hibernate-gradle-plugin/hibernate-gradle-plugin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tooling/hibernate-gradle-plugin/hibernate-gradle-plugin_main.iml" group="hibernate-gradle-plugin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tooling/hibernate-gradle-plugin/hibernate-gradle-plugin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tooling/hibernate-gradle-plugin/hibernate-gradle-plugin_test.iml" group="hibernate-gradle-plugin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-hikaricp/hibernate-hikaricp.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-hikaricp/hibernate-hikaricp.iml" group="hibernate-hikaricp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-hikaricp/hibernate-hikaricp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-hikaricp/hibernate-hikaricp_main.iml" group="hibernate-hikaricp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-hikaricp/hibernate-hikaricp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-hikaricp/hibernate-hikaricp_test.iml" group="hibernate-hikaricp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-infinispan/hibernate-infinispan.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-infinispan/hibernate-infinispan.iml" group="hibernate-infinispan" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-java8/hibernate-java8.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-java8/hibernate-java8.iml" group="hibernate-java8" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-java8/hibernate-java8_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-java8/hibernate-java8_main.iml" group="hibernate-java8" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-java8/hibernate-java8_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-java8/hibernate-java8_test.iml" group="hibernate-java8" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-jcache/hibernate-jcache.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-jcache/hibernate-jcache.iml" group="hibernate-jcache" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-jcache/hibernate-jcache_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-jcache/hibernate-jcache_main.iml" group="hibernate-jcache" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-jcache/hibernate-jcache_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-jcache/hibernate-jcache_test.iml" group="hibernate-jcache" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-jipijapa/hibernate-jipijapa.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-jipijapa/hibernate-jipijapa.iml" group="hibernate-jipijapa" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-jipijapa/hibernate-jipijapa_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-jipijapa/hibernate-jipijapa_main.iml" group="hibernate-jipijapa" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-jipijapa/hibernate-jipijapa_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-jipijapa/hibernate-jipijapa_test.iml" group="hibernate-jipijapa" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tooling/metamodel-generator/hibernate-jpamodelgen.iml" filepath="$PROJECT_DIR$/.idea/modules/tooling/metamodel-generator/hibernate-jpamodelgen.iml" group="hibernate-jpamodelgen" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tooling/metamodel-generator/hibernate-jpamodelgen_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tooling/metamodel-generator/hibernate-jpamodelgen_main.iml" group="hibernate-jpamodelgen" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tooling/metamodel-generator/hibernate-jpamodelgen_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tooling/metamodel-generator/hibernate-jpamodelgen_test.iml" group="hibernate-jpamodelgen" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-orm-modules/hibernate-orm-modules.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-orm-modules/hibernate-orm-modules.iml" group="hibernate-orm-modules" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-orm-modules/hibernate-orm-modules_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-orm-modules/hibernate-orm-modules_main.iml" group="hibernate-orm-modules" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-orm-modules/hibernate-orm-modules_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-orm-modules/hibernate-orm-modules_test.iml" group="hibernate-orm-modules" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-osgi/hibernate-osgi.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-osgi/hibernate-osgi.iml" group="hibernate-osgi" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-osgi/hibernate-osgi_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-osgi/hibernate-osgi_main.iml" group="hibernate-osgi" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-osgi/hibernate-osgi_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-osgi/hibernate-osgi_test.iml" group="hibernate-osgi" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-proxool/hibernate-proxool.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-proxool/hibernate-proxool.iml" group="hibernate-proxool" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-proxool/hibernate-proxool_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-proxool/hibernate-proxool_main.iml" group="hibernate-proxool" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-proxool/hibernate-proxool_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-proxool/hibernate-proxool_test.iml" group="hibernate-proxool" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-spatial/hibernate-spatial.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-spatial/hibernate-spatial.iml" group="hibernate-spatial" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-spatial/hibernate-spatial_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-spatial/hibernate-spatial_main.iml" group="hibernate-spatial" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-spatial/hibernate-spatial_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-spatial/hibernate-spatial_test.iml" group="hibernate-spatial" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-testing/hibernate-testing.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-testing/hibernate-testing.iml" group="hibernate-testing" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-testing/hibernate-testing_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-testing/hibernate-testing_main.iml" group="hibernate-testing" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-testing/hibernate-testing_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-testing/hibernate-testing_test.iml" group="hibernate-testing" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-vibur/hibernate-vibur.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-vibur/hibernate-vibur.iml" group="hibernate-vibur" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-vibur/hibernate-vibur_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-vibur/hibernate-vibur_main.iml" group="hibernate-vibur" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate-vibur/hibernate-vibur_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate-vibur/hibernate-vibur_test.iml" group="hibernate-vibur" />
+      <module fileurl="file://$PROJECT_DIR$/project.iml" filepath="$PROJECT_DIR$/project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/release/release.iml" filepath="$PROJECT_DIR$/.idea/modules/release/release.iml" group="release" />
+    </modules>
+  </component>
+</project>

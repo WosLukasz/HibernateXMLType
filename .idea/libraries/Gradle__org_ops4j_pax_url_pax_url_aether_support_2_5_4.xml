@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.ops4j.pax.url:pax-url-aether-support:2.5.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.pax.url/pax-url-aether-support/2.5.4/6c4ac88ca164b56a03b12fa8cecbde61531ad7c9/pax-url-aether-support-2.5.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ops4j.pax.url/pax-url-aether-support/2.5.4/faa07badff30876b03c47792338cc023c2e11229/pax-url-aether-support-2.5.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

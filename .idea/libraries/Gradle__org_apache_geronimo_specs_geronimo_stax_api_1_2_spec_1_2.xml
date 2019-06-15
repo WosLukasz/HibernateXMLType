@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.geronimo.specs:geronimo-stax-api_1.2_spec:1.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.geronimo.specs/geronimo-stax-api_1.2_spec/1.2/e3f2cbc94d2fb7b0715049627e73d60029aff488/geronimo-stax-api_1.2_spec-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.geronimo.specs/geronimo-stax-api_1.2_spec/1.2/227aec45fbf0d42e09f4be9d0c0e4f0ebc0f863a/geronimo-stax-api_1.2_spec-1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

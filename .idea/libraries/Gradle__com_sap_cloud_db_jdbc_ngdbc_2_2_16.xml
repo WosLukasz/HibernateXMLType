@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sap.cloud.db.jdbc:ngdbc:2.2.16">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sap.cloud.db.jdbc/ngdbc/2.2.16/62841cf583be1690d75543bb810e58a0de520c18/ngdbc-2.2.16.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sap.cloud.db.jdbc/ngdbc/2.2.16/fa44b49982ab39a4b848feae97ab354640c430fb/ngdbc-2.2.16-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

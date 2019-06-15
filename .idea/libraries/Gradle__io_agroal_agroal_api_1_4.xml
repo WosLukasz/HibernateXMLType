@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.agroal:agroal-api:1.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.agroal/agroal-api/1.4/40c9af7c3dcb0c9df25a7e7d71d0f08277de02ca/agroal-api-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.agroal/agroal-api/1.4/ba2dfeab445e265914862ca85bd8d23d8ad9e99e/agroal-api-1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

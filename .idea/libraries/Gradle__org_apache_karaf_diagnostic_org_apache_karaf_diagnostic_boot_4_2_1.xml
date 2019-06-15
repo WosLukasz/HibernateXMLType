@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.karaf.diagnostic:org.apache.karaf.diagnostic.boot:4.2.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.karaf.diagnostic/org.apache.karaf.diagnostic.boot/4.2.1/546393b05df0e754c835cf2bf7e924bf7a8b3990/org.apache.karaf.diagnostic.boot-4.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.karaf.diagnostic/org.apache.karaf.diagnostic.boot/4.2.1/4cf5d6bfd690d913276679caf5deb6c35511c987/org.apache.karaf.diagnostic.boot-4.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

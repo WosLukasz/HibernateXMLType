@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.wildfly:jipijapa-spi:14.0.1.Final">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.wildfly/jipijapa-spi/14.0.1.Final/82586b35231ddf6f6a14d0a5d3e57ca072d246ce/jipijapa-spi-14.0.1.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.wildfly/jipijapa-spi/14.0.1.Final/7137536eb65bce48d2a78d640f2bc1b2c50e2eb3/jipijapa-spi-14.0.1.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
