@@ -1,0 +1,4 @@
+buildSrc/
+.gradle/
+hibernate-core/out/
+*.iml
