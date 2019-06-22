@@ -1,4 +1,13 @@
-/buildSrc/
-/.gradle/
-/hibernate-core/out/
+/buildSrc/*
+/.gradle/*
+/hibernate-core/out/*
 *.iml
+##########################
+## Java
+##########################
+*.class
+.mtj.tmp/
+*.jar
+*.war
+*.ear
+hs_err_pid*
