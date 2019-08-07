@@ -1,5 +1,8 @@
 package org.hibernate.type;
 
+import org.hibernate.MappingException;
+import org.hibernate.engine.spi.Mapping;
+
 import java.sql.SQLXML;
 
 public class XMLType extends AbstractSingleColumnStandardBasicType<SQLXML> {
@@ -8,6 +11,11 @@ public class XMLType extends AbstractSingleColumnStandardBasicType<SQLXML> {
     public XMLType() {
         super(  org.hibernate.type.descriptor.sql.XMLTypeDescriptor.INSTANCE,
                 org.hibernate.type.descriptor.java.XMLTypeDescriptor.INSTANCE );
+    }
+
+    @Override
+    public String[] getRegistrationKeys() {
+        return new String[] {getName(), SQLXML.class.getName()};
     }
 
     @Override
