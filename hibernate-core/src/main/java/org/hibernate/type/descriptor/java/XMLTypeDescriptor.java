@@ -18,6 +18,7 @@ import org.xml.sax.SAXException;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.SQLException;
 import java.sql.SQLXML;
 
 public class XMLTypeDescriptor extends AbstractTypeDescriptor<SQLXML> {
@@ -29,6 +30,11 @@ public class XMLTypeDescriptor extends AbstractTypeDescriptor<SQLXML> {
 
     @Override
     public String toString(SQLXML value) {
+        try {
+            return value.getString();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
@@ -57,13 +63,5 @@ public class XMLTypeDescriptor extends AbstractTypeDescriptor<SQLXML> {
             return (SQLXML)value;
         }
         throw unknownWrap( value.getClass() );
-    }
-
-
-    //TODO: Ogarnac o co chodzi z ta funkcja na przykladach z innych deskryptorow z java
-    @Override
-    public SqlTypeDescriptor getJdbcRecommendedSqlType(JdbcRecommendedSqlTypeMappingContext context) {
-        System.out.println("getJdbcRecommendedJavaTypeMapping from java");
-        return null;
     }
 }
