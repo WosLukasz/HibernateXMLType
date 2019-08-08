@@ -18,6 +18,7 @@ import org.xml.sax.SAXException;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.PreparedStatement;
 import java.sql.SQLXML;
 
 public class XMLTypeDescriptor extends AbstractTypeDescriptor<Document> {
@@ -39,13 +40,11 @@ public class XMLTypeDescriptor extends AbstractTypeDescriptor<Document> {
 
     @Override
     public <X> X unwrap(Document value, Class<X> type, WrapperOptions options) {
-        System.out.println("unwrap");
         if ( value == null ) {
             return null;
         }
         if ( SQLXML.class.isAssignableFrom( type ) ) {
-            return (X) value;
-            //return (X) SQLXMLParser.INSTANCE.DOMToXML(value);
+            return (X) SQLXMLParser.INSTANCE.DOMToXML(value);
         }
         throw unknownUnwrap( type );
     }
@@ -71,6 +70,12 @@ public class XMLTypeDescriptor extends AbstractTypeDescriptor<Document> {
 
     public static class SQLXMLParser {
         public static final SQLXMLParser INSTANCE = new SQLXMLParser();
+
+        private static PreparedStatement preparedStatement;
+
+        public static void setPreparedStatement(PreparedStatement preparedStatement) {
+            SQLXMLParser.preparedStatement = preparedStatement;
+        }
 
         public Document XMLToDOM(SQLXML sqlxml) {
             try {
@@ -103,28 +108,17 @@ public class XMLTypeDescriptor extends AbstractTypeDescriptor<Document> {
         }
 
         public SQLXML DOMToXML(Document document) {
-
-            //SessionImpl session =
-
-            return null;
-//            try {
-//                //TODO: Zrobic cos z tym stm
-//                SQLXML sqlxml = stmt.getConnection().createSQLXML();
-//                SAXResult sax = sqlxml.setResult(SAXResult.class);
-//                Transformer transformer = TransformerFactory.newInstance().newTransformer();
-//                transformer.transform(new DOMSource(document), sax);
-//                return sqlxml;
-//            } catch (SAXException e) {
-//                e.printStackTrace();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//            throw new HibernateException("DOMToXML failure");
+            try {
+                SQLXML sqlxml = preparedStatement.getConnection().createSQLXML();
+                SAXResult sax = sqlxml.setResult(SAXResult.class);
+                Transformer transformer = TransformerFactory.newInstance().newTransformer();
+                transformer.transform(new DOMSource(document), sax);
+                return sqlxml;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            throw new HibernateException("DOMToXML failure");
         }
-
-
     }
 
 }

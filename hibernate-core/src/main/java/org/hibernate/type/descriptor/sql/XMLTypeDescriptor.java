@@ -34,28 +34,16 @@ public class XMLTypeDescriptor implements SqlTypeDescriptor {
 
     @Override
     public <X> ValueBinder<X> getBinder(JavaTypeDescriptor<X> javaTypeDescriptor) {
-        System.out.println("getBinder");
         return new BasicBinder<X>( javaTypeDescriptor, this ) {
             @Override
             protected void doBind(PreparedStatement st, X value, int index, WrapperOptions options) throws SQLException {
-                SQLXML sqlxml = st.getConnection().createSQLXML();
-                SAXResult sax = sqlxml.setResult(SAXResult.class);
-                Transformer transformer = null;
-                try {
-                    transformer = TransformerFactory.newInstance().newTransformer();
-                    transformer.transform(new DOMSource((Document)value), sax);
-                } catch (TransformerConfigurationException e) {
-                    e.printStackTrace();
-                } catch (TransformerException e) {
-                    e.printStackTrace();
-                }
-                st.setSQLXML( index,  sqlxml);
-                //TODO: Ogarnac z tym tworzeniem obiektu
-                //st.setSQLXML( index, javaTypeDescriptor.unwrap( value, SQLXML.class, options ) );
+                org.hibernate.type.descriptor.java.XMLTypeDescriptor.SQLXMLParser.setPreparedStatement(st);
+                st.setSQLXML( index, javaTypeDescriptor.unwrap( value, SQLXML.class, options ) );
             }
 
             @Override
             protected void doBind(CallableStatement st, X value, String name, WrapperOptions options) throws SQLException {
+                org.hibernate.type.descriptor.java.XMLTypeDescriptor.SQLXMLParser.setPreparedStatement(st);
                 st.setSQLXML( name, javaTypeDescriptor.unwrap( value, SQLXML.class, options ) );
             }
         };
