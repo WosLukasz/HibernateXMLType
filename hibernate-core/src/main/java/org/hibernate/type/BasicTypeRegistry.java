@@ -94,6 +94,7 @@ public class BasicTypeRegistry implements Serializable {
 		register( MaterializedClobType.INSTANCE );
 		register( MaterializedNClobType.INSTANCE );
 		register( SerializableType.INSTANCE );
+		register( XMLType.INSTANCE);
 
 		register( ObjectType.INSTANCE );
 

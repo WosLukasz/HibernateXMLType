@@ -68,11 +68,4 @@ public class XMLTypeDescriptor implements SqlTypeDescriptor {
             }
         };
     }
-
-    //TODO: Ogarnac o co chodzi z ta funkcja na przykladach z innych deskryptorow z sql
-    @Override
-    public <T> BasicJavaDescriptor<T> getJdbcRecommendedJavaTypeMapping(TypeConfiguration typeConfiguration) {
-        System.out.println("getJdbcRecommendedJavaTypeMapping from sql");
-        return null;
-    }
 }

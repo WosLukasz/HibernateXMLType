@@ -6,19 +6,27 @@ import org.hibernate.type.descriptor.WrapperOptions;
 import org.hibernate.type.descriptor.spi.JdbcRecommendedSqlTypeMappingContext;
 import org.hibernate.type.descriptor.sql.SqlTypeDescriptor;
 
+import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.sax.SAXResult;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
 
 import org.w3c.dom.Document;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.StringReader;
+import java.io.StringWriter;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.sql.SQLXML;
 
 public class XMLTypeDescriptor extends AbstractTypeDescriptor<Document> {
@@ -30,11 +38,44 @@ public class XMLTypeDescriptor extends AbstractTypeDescriptor<Document> {
 
     @Override
     public String toString(Document value) {
-        return null;
+
+        if ( value == null ) {
+            return null;
+        }
+        TransformerFactory tf = TransformerFactory.newInstance();
+        Transformer transformer = null;
+        try {
+            transformer = tf.newTransformer();
+        } catch (TransformerConfigurationException e) {
+            e.printStackTrace();
+        }
+        transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+        StringWriter writer = new StringWriter();
+        try {
+            transformer.transform(new DOMSource(value), new StreamResult(writer));
+        } catch (TransformerException e) {
+            e.printStackTrace();
+        }
+        String output = writer.getBuffer().toString().replaceAll("\n|\r", "");
+        return output;
     }
 
     @Override
     public Document fromString(String string) {
+
+        if ( string == null ) {
+            return null;
+        }
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = null;
+        try {
+            builder = factory.newDocumentBuilder();
+            Document doc = (builder.parse(new InputSource(new StringReader(string))));
+            return doc;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
@@ -60,14 +101,6 @@ public class XMLTypeDescriptor extends AbstractTypeDescriptor<Document> {
         throw unknownWrap( value.getClass() );
     }
 
-
-    //TODO: Ogarnac o co chodzi z ta funkcja na przykladach z innych deskryptorow z java
-    @Override
-    public SqlTypeDescriptor getJdbcRecommendedSqlType(JdbcRecommendedSqlTypeMappingContext context) {
-        System.out.println("getJdbcRecommendedJavaTypeMapping from java");
-        return null;
-    }
-
     public static class SQLXMLParser {
         public static final SQLXMLParser INSTANCE = new SQLXMLParser();
 
@@ -84,18 +117,6 @@ public class XMLTypeDescriptor extends AbstractTypeDescriptor<Document> {
                 DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
                 Document document = dBuilder.parse(binaryStream);
                 document.getDocumentElement().normalize();
-                //TODO: Sprawdzic czy tutaj juz jest weryfikacja poprawnosci tego xml a jak nie to dorobic
-//                                Schema schema = null;
-//                                try {
-//                                    String language = XMLConstants.W3C_XML_SCHEMA_NS_URI;
-//                                    SchemaFactory factory = SchemaFactory.newInstance(language);
-//                                    schema = factory.newSchema(new File(name));
-//                                } catch (Exception e) {
-//                                    e.printStackStrace();
-//                                }
-//                                Validator validator = schema.newValidator();
-//                                validator.validate(new DOMSource(document));
-                //System.out.println("document:" + document.getFirstChild().getNodeName());
                 return document;
             } catch (SAXException e) {
                 e.printStackTrace();
