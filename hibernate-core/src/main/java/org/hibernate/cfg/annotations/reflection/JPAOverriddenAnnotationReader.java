@@ -115,10 +115,7 @@ import javax.persistence.UniqueConstraint;
 import javax.persistence.Version;
 
 import org.hibernate.AnnotationException;
-import org.hibernate.annotations.Any;
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.Columns;
-import org.hibernate.annotations.ManyToAny;
+import org.hibernate.annotations.*;
 import org.hibernate.annotations.common.annotationfactory.AnnotationDescriptor;
 import org.hibernate.annotations.common.annotationfactory.AnnotationFactory;
 import org.hibernate.annotations.common.reflection.AnnotationReader;
@@ -236,6 +233,7 @@ public class JPAOverriddenAnnotationReader implements AnnotationReader {
 		annotationToXml.put( Convert.class, "convert" );
 		annotationToXml.put( Converts.class, "convert" );
 		annotationToXml.put( ConstructorResult.class, "constructor-result" );
+		annotationToXml.put( XPath.class, "x-path" ); //TODO: Ogarnac o co z tym chodzi i jeszcze pomyslec o obsludze mapowania za pomocą pliku XML
 	}
 
 	private XMLContext xmlContext;

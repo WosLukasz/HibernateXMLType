@@ -94,6 +94,9 @@ public class SimpleValue implements KeyValue {
 	private ConverterDescriptor attributeConverterDescriptor;
 	private Type type;
 
+	private String xPath;
+	private Class endClass;
+
 	/**
 	 * @deprecated Use {@link SimpleValue#SimpleValue(MetadataBuildingContext)} instead.
 	 */
@@ -138,7 +141,23 @@ public class SimpleValue implements KeyValue {
 	public void setCascadeDeleteEnabled(boolean cascadeDeleteEnabled) {
 		this.cascadeDeleteEnabled = cascadeDeleteEnabled;
 	}
-	
+
+	public String getxPath() {
+		return xPath;
+	}
+
+	public void setxPath(String xPath) {
+		this.xPath = xPath;
+	}
+
+	public Class getEndClass() {
+		return endClass;
+	}
+
+	public void setEndClass(Class endClass) {
+		this.endClass = endClass;
+	}
+
 	public void addColumn(Column column) {
 		addColumn( column, true, true );
 	}

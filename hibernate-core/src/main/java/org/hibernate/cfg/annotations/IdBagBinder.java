@@ -76,7 +76,8 @@ public class IdBagBinder extends BagBinder {
 					propertyHolder,
 					propertyData,
 					Collections.EMPTY_MAP,
-					buildingContext
+					buildingContext,
+					null
 			);
 			//we need to make sure all id columns must be not-null.
 			for(Ejb3Column idColumn:idColumns){

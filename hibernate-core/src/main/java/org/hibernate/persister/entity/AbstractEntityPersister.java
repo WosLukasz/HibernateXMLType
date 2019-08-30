@@ -96,14 +96,7 @@ import org.hibernate.loader.entity.CascadeEntityLoader;
 import org.hibernate.loader.entity.DynamicBatchingEntityLoaderBuilder;
 import org.hibernate.loader.entity.EntityLoader;
 import org.hibernate.loader.entity.UniqueEntityLoader;
-import org.hibernate.mapping.Column;
-import org.hibernate.mapping.Component;
-import org.hibernate.mapping.Formula;
-import org.hibernate.mapping.PersistentClass;
-import org.hibernate.mapping.Property;
-import org.hibernate.mapping.Selectable;
-import org.hibernate.mapping.Subclass;
-import org.hibernate.mapping.Table;
+import org.hibernate.mapping.*;
 import org.hibernate.metadata.ClassMetadata;
 import org.hibernate.metamodel.model.domain.NavigableRole;
 import org.hibernate.persister.collection.CollectionPersister;
@@ -138,6 +131,12 @@ import org.hibernate.type.EntityType;
 import org.hibernate.type.Type;
 import org.hibernate.type.TypeHelper;
 import org.hibernate.type.VersionType;
+import org.w3c.dom.Document;
+
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
 
 /**
  * Basic functionality for persisting an entity via JDBC
@@ -198,6 +197,8 @@ public abstract class AbstractEntityPersister
 	private final boolean[][] propertyColumnInsertable;
 	private final boolean[] propertyUniqueness;
 	private final boolean[] propertySelectable;
+	private final String[] propertyColumnxPath;
+	private final Class[] propertyColumnFinalType;
 
 	private final List<Integer> lobProperties = new ArrayList<>();
 
@@ -332,6 +333,14 @@ public abstract class AbstractEntityPersister
 	protected abstract String filterFragment(String alias) throws MappingException;
 
 	protected abstract String filterFragment(String alias, Set<String> treatAsDeclarations);
+
+	public String[] getPropertyColumnxPath() {
+		return propertyColumnxPath;
+	}
+
+	public Class[] getPropertyColumnFinalType() {
+		return propertyColumnFinalType;
+	}
 
 	private static final String DISCRIMINATOR_ALIAS = "clazz_";
 
@@ -640,6 +649,8 @@ public abstract class AbstractEntityPersister
 		propertySelectable = new boolean[hydrateSpan];
 		propertyColumnUpdateable = new boolean[hydrateSpan][];
 		propertyColumnInsertable = new boolean[hydrateSpan][];
+		propertyColumnxPath = new String[hydrateSpan];
+		propertyColumnFinalType = new Class[hydrateSpan];
 		HashSet thisClassProperties = new HashSet();
 
 		ArrayList lazyNames = new ArrayList();
@@ -702,6 +713,14 @@ public abstract class AbstractEntityPersister
 
 			if ( prop.isLob() && dialect.forceLobAsLastValue() ) {
 				lobProperties.add( i );
+			}
+
+			if(prop.getValue() instanceof SimpleValue  && ((SimpleValue)prop.getValue()).getxPath() != null) {
+				propertyColumnxPath[i] = ((SimpleValue)prop.getValue()).getxPath();
+				propertyColumnFinalType[i] = ((SimpleValue)prop.getValue()).getEndClass();
+			} else {
+				propertyColumnxPath[i] = null;
+				propertyColumnFinalType[i] = null;
 			}
 
 			i++;
@@ -872,7 +891,6 @@ public abstract class AbstractEntityPersister
 		else {
 			this.invalidateCache = false;
 		}
-
 	}
 
 	@SuppressWarnings("RedundantIfStatement")
@@ -2992,6 +3010,8 @@ public abstract class AbstractEntityPersister
 			final String[] propNames = getPropertyNames();
 			final Type[] types = getPropertyTypes();
 			final Object[] values = new Object[types.length];
+			final String[] xPaths = getPropertyColumnxPath();
+			final Class[] finalTypes = getPropertyColumnFinalType();
 			final boolean[] laziness = getPropertyLaziness();
 			final String[] propSubclassNames = getSubclassPropertySubclassNameClosure();
 
@@ -3011,7 +3031,11 @@ public abstract class AbstractEntityPersister
 						final String[] cols = propertyIsDeferred ?
 								propertyColumnAliases[i] :
 								suffixedPropertyColumns[i];
-						values[i] = types[i].hydrate( propertyResultSet, cols, session, object );
+						Object resolvedObject = types[i].hydrate( propertyResultSet, cols, session, object );
+						if(xPaths[i] != null) {
+							resolvedObject = getxPathElement(resolvedObject, xPaths[i], finalTypes[i]);
+						}
+						values[i] = resolvedObject;
 					}
 				}
 				else {
@@ -3033,6 +3057,34 @@ public abstract class AbstractEntityPersister
 			}
 		}
 	}
+
+	private Object getxPathElement(Object xmlData, String xPath, Class finalClass) {
+		Object result = xmlData;
+		if(xmlData instanceof Document) {
+			XPath xPathObjec = XPathFactory.newInstance().newXPath();
+			try {
+				if(finalClass == Boolean.class) {
+					result =  xPathObjec.compile(xPath).evaluate(xmlData, XPathConstants.BOOLEAN);
+				} else {
+					result = (String) xPathObjec.compile(xPath).evaluate(xmlData, XPathConstants.STRING);
+					if(finalClass == Integer.class) {
+						result = Integer.parseInt((String)result);
+					} else if(finalClass == Float.class) {
+						result = Float.parseFloat((String)result);
+					} else if(finalClass == Double.class) {
+						result = Double.parseDouble((String)result);
+					}
+				}
+
+			} catch (XPathExpressionException e) {
+				e.printStackTrace();
+			}
+			return result;
+		} else {
+			return result;
+		}
+	}
+
 
 	protected boolean useInsertSelectIdentity() {
 		return !useGetGeneratedKeys() && getFactory().getDialect().getIdentityColumnSupport().supportsInsertSelectIdentity();

@@ -77,52 +77,7 @@ import org.hibernate.AssertionFailure;
 import org.hibernate.EntityMode;
 import org.hibernate.FetchMode;
 import org.hibernate.MappingException;
-import org.hibernate.annotations.BatchSize;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
-import org.hibernate.annotations.Check;
-import org.hibernate.annotations.CollectionId;
-import org.hibernate.annotations.Columns;
-import org.hibernate.annotations.DiscriminatorFormula;
-import org.hibernate.annotations.DiscriminatorOptions;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchProfile;
-import org.hibernate.annotations.FetchProfiles;
-import org.hibernate.annotations.Filter;
-import org.hibernate.annotations.FilterDef;
-import org.hibernate.annotations.FilterDefs;
-import org.hibernate.annotations.Filters;
-import org.hibernate.annotations.ForeignKey;
-import org.hibernate.annotations.Formula;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.GenericGenerators;
-import org.hibernate.annotations.Index;
-import org.hibernate.annotations.LazyGroup;
-import org.hibernate.annotations.LazyToOne;
-import org.hibernate.annotations.LazyToOneOption;
-import org.hibernate.annotations.ListIndexBase;
-import org.hibernate.annotations.ManyToAny;
-import org.hibernate.annotations.MapKeyType;
-import org.hibernate.annotations.NaturalId;
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-import org.hibernate.annotations.OrderBy;
-import org.hibernate.annotations.ParamDef;
-import org.hibernate.annotations.Parameter;
-import org.hibernate.annotations.Parent;
-import org.hibernate.annotations.Proxy;
-import org.hibernate.annotations.Sort;
-import org.hibernate.annotations.SortComparator;
-import org.hibernate.annotations.SortNatural;
-import org.hibernate.annotations.Source;
-import org.hibernate.annotations.Tuplizer;
-import org.hibernate.annotations.Tuplizers;
-import org.hibernate.annotations.TypeDef;
-import org.hibernate.annotations.TypeDefs;
-import org.hibernate.annotations.Where;
+import org.hibernate.annotations.*;
 import org.hibernate.annotations.common.reflection.ClassLoadingException;
 import org.hibernate.annotations.common.reflection.XAnnotatedElement;
 import org.hibernate.annotations.common.reflection.XClass;
@@ -1658,6 +1613,10 @@ public final class AnnotationBinder {
 			return;
 		}
 
+		if(property.isAnnotationPresent( XPath.class )) {
+			//ustawienie tutaj adnotacji @Type(type="org.hibernate.type.XMLType")
+		}
+
 		ColumnsBuilder columnsBuilder = new ColumnsBuilder(
 				propertyHolder,
 				nullability,
@@ -1985,7 +1944,8 @@ public final class AnnotationBinder {
 							propertyHolder,
 							virtualProperty,
 							entityBinder.getSecondaryTables(),
-							context
+							context,
+							null
 					);
 				}
 				else if ( property.isAnnotationPresent( Columns.class ) ) {
@@ -1997,7 +1957,8 @@ public final class AnnotationBinder {
 							propertyHolder,
 							virtualProperty,
 							entityBinder.getSecondaryTables(),
-							context
+							context,
+							null
 					);
 				}
 				else {
@@ -2008,7 +1969,8 @@ public final class AnnotationBinder {
 							propertyHolder,
 							virtualProperty,
 							entityBinder.getSecondaryTables(),
-							context
+							context,
+							null
 					);
 				}
 				{
@@ -2038,7 +2000,8 @@ public final class AnnotationBinder {
 							isJPA2 ? inferredData : mapKeyVirtualProperty,
 							isJPA2 ? "_KEY" : null,
 							entityBinder.getSecondaryTables(),
-							context
+							context,
+							null
 					);
 					collectionBinder.setMapKeyColumns( mapColumns );
 				}

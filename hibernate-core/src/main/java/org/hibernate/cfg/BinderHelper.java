@@ -1003,7 +1003,8 @@ public class BinderHelper {
 				propertyHolder,
 				inferredData,
 				entityBinder.getSecondaryTables(),
-				context
+				context,
+				null
 		);
 
 		//set metaColumn to the right table

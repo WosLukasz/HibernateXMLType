@@ -10,10 +10,7 @@ import java.util.Map;
 
 import org.hibernate.AnnotationException;
 import org.hibernate.AssertionFailure;
-import org.hibernate.annotations.ColumnDefault;
-import org.hibernate.annotations.ColumnTransformer;
-import org.hibernate.annotations.ColumnTransformers;
-import org.hibernate.annotations.Index;
+import org.hibernate.annotations.*;
 import org.hibernate.annotations.common.reflection.XProperty;
 import org.hibernate.boot.model.naming.Identifier;
 import org.hibernate.boot.model.naming.ImplicitBasicColumnNameSource;
@@ -67,6 +64,8 @@ public class Ejb3Column {
 	private Table table;
 	private String readExpression;
 	private String writeExpression;
+	private String xPath;
+	private Class endType;
 
 	private String defaultValue;
 
@@ -193,7 +192,23 @@ public class Ejb3Column {
 		this.defaultValue = defaultValue;
 	}
 
-	public Ejb3Column() {
+	public String getxPath() {
+		return xPath;
+	}
+
+	public void setxPath(String xPath) {
+		this.xPath = xPath;
+	}
+
+    public Class getEndType() {
+        return endType;
+    }
+
+    public void setEndType(Class endType) {
+        this.endType = endType;
+    }
+
+    public Ejb3Column() {
 	}
 
 	public void bind() {
@@ -475,7 +490,8 @@ public class Ejb3Column {
 			PropertyHolder propertyHolder,
 			PropertyData inferredData,
 			Map<String, Join> secondaryTables,
-			MetadataBuildingContext context) {
+			MetadataBuildingContext context,
+			XPath xPathAnnotation) {
 		return buildColumnFromAnnotation(
 				anns,
 				formulaAnn,
@@ -484,7 +500,8 @@ public class Ejb3Column {
 				inferredData,
 				null,
 				secondaryTables,
-				context
+				context,
+				xPathAnnotation
 		);
 	}
 	public static Ejb3Column[] buildColumnFromAnnotation(
@@ -495,7 +512,8 @@ public class Ejb3Column {
 			PropertyData inferredData,
 			String suffixForDefaultColumnName,
 			Map<String, Join> secondaryTables,
-			MetadataBuildingContext context) {
+			MetadataBuildingContext context,
+			XPath xPathAnnotation) {
 		Ejb3Column[] columns;
 		if ( formulaAnn != null ) {
 			Ejb3Column formulaColumn = new Ejb3Column();
@@ -608,6 +626,10 @@ public class Ejb3Column {
 					column.setPropertyHolder( propertyHolder );
 					column.setJoins( secondaryTables );
 					column.setBuildingContext( context );
+					if(xPathAnnotation != null) {
+						column.setxPath(xPathAnnotation.path());
+						column.setEndType(xPathAnnotation.type());
+					}
 					column.extractDataFromPropertyData(inferredData);
 					column.bind();
 					columns[index] = column;

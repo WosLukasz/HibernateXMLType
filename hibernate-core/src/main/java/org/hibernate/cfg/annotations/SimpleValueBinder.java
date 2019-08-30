@@ -423,6 +423,11 @@ public class SimpleValueBinder {
 			simpleValue.makeLob();
 		}
 
+		if ( columns[0].getxPath() != null ) {
+			simpleValue.setxPath(columns[0].getxPath());
+			simpleValue.setEndClass(columns[0].getEndType());
+		}
+
 		linkWithValue();
 
 		boolean isInSecondPass = buildingContext.getMetadataCollector().isInSecondPass();

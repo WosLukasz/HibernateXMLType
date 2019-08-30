@@ -16,11 +16,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import org.hibernate.AnnotationException;
-import org.hibernate.annotations.Columns;
-import org.hibernate.annotations.Formula;
-import org.hibernate.annotations.JoinColumnOrFormula;
-import org.hibernate.annotations.JoinColumnsOrFormulas;
-import org.hibernate.annotations.JoinFormula;
+import org.hibernate.annotations.*;
 import org.hibernate.annotations.common.reflection.XProperty;
 import org.hibernate.boot.spi.MetadataBuildingContext;
 import org.hibernate.cfg.annotations.EntityBinder;
@@ -75,6 +71,7 @@ class ColumnsBuilder {
 		if ( property.isAnnotationPresent( Column.class ) || property.isAnnotationPresent( Formula.class ) ) {
 			Column ann = property.getAnnotation( Column.class );
 			Formula formulaAnn = property.getAnnotation( Formula.class );
+			XPath xPathAnnotation = property.isAnnotationPresent( XPath.class ) ? property.getAnnotation(XPath.class) : null;
 			columns = Ejb3Column.buildColumnFromAnnotation(
 					new Column[] { ann },
 					formulaAnn,
@@ -82,7 +79,8 @@ class ColumnsBuilder {
 					propertyHolder,
 					inferredData,
 					entityBinder.getSecondaryTables(),
-					buildingContext
+					buildingContext,
+					xPathAnnotation
 			);
 		}
 		else if ( property.isAnnotationPresent( Columns.class ) ) {
@@ -94,7 +92,8 @@ class ColumnsBuilder {
 					propertyHolder,
 					inferredData,
 					entityBinder.getSecondaryTables(),
-					buildingContext
+					buildingContext,
+					null
 			);
 		}
 
@@ -135,7 +134,8 @@ class ColumnsBuilder {
 					propertyHolder,
 					inferredData,
 					entityBinder.getSecondaryTables(),
-					buildingContext
+					buildingContext,
+					null
 			);
 		}
 
