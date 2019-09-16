@@ -22,10 +22,7 @@ import javax.persistence.TemporalType;
 import org.hibernate.AnnotationException;
 import org.hibernate.AssertionFailure;
 import org.hibernate.MappingException;
-import org.hibernate.annotations.MapKeyType;
-import org.hibernate.annotations.Nationalized;
-import org.hibernate.annotations.Parameter;
-import org.hibernate.annotations.Type;
+import org.hibernate.annotations.*;
 import org.hibernate.annotations.common.reflection.ClassLoadingException;
 import org.hibernate.annotations.common.reflection.XClass;
 import org.hibernate.annotations.common.reflection.XProperty;
@@ -169,7 +166,10 @@ public class SimpleValueBinder {
 			}
 		}
 
-		if ( annType != null ) {
+		if(property.isAnnotationPresent( XPath.class )) {
+			setExplicitType("org.hibernate.type.XMLType");
+			type = explicitType;
+		}else if ( annType != null ) {
 			setExplicitType( annType );
 			type = explicitType;
 		}

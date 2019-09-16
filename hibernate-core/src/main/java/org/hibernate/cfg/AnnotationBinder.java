@@ -1613,10 +1613,6 @@ public final class AnnotationBinder {
 			return;
 		}
 
-		if(property.isAnnotationPresent( XPath.class )) {
-			//ustawienie tutaj adnotacji @Type(type="org.hibernate.type.XMLType")
-		}
-
 		ColumnsBuilder columnsBuilder = new ColumnsBuilder(
 				propertyHolder,
 				nullability,
