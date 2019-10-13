@@ -169,7 +169,7 @@ public class SimpleValueBinder {
 		if(property.isAnnotationPresent( XPath.class )) {
 			setExplicitType("org.hibernate.type.XMLType");
 			type = explicitType;
-		}else if ( annType != null ) {
+		} else if ( annType != null ) {
 			setExplicitType( annType );
 			type = explicitType;
 		}
@@ -308,6 +308,10 @@ public class SimpleValueBinder {
 
 		defaultType = BinderHelper.isEmptyAnnotationValue( type ) ? returnedClassName : type;
 		this.typeParameters = typeParameters;
+
+		if(property.isAnnotationPresent(Id.class) && "org.hibernate.type.XMLType".equals(explicitType)) {
+			throw new MappingException("XML column type cannot be primary key");
+		}
 
 		applyAttributeConverter( property, attributeConverterDescriptor );
 	}

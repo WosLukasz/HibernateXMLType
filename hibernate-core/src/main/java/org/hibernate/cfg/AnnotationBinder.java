@@ -736,6 +736,8 @@ public final class AnnotationBinder {
 		final InheritanceState.ElementsToProcess elementsToProcess = inheritanceState.getElementsToProcess();
 		inheritanceState.postProcess( persistentClass, entityBinder );
 
+		validatexPathMutability(clazzToProcess, elementsToProcess);
+
 		final boolean subclassAndSingleTableStrategy = inheritanceState.getType() == InheritanceType.SINGLE_TABLE
 				&& inheritanceState.hasParents();
 		Set<String> idPropertiesIfIdClass = new HashSet<>();
@@ -789,6 +791,16 @@ public final class AnnotationBinder {
 		entityBinder.processComplementaryTableDefinitions( clazzToProcess.getAnnotation( org.hibernate.annotations.Table.class ) );
 		entityBinder.processComplementaryTableDefinitions( clazzToProcess.getAnnotation( org.hibernate.annotations.Tables.class ) );
 		entityBinder.processComplementaryTableDefinitions( tabAnn );
+	}
+
+	private static void validatexPathMutability(XClass clazzToProcess, InheritanceState.ElementsToProcess elementsToProcess) {
+		Boolean isClassReadOnly = clazzToProcess.isAnnotationPresent(ReadOnly.class);
+		for ( PropertyData propertyAnnotatedElement : elementsToProcess.getElements() ) {
+			final XProperty property = propertyAnnotatedElement.getProperty();
+			if(property.isAnnotationPresent(XPath.class) && !isClassReadOnly) {
+				throw new MappingException( "Using @XPath, class must be @ReadOnly." );
+			}
+		}
 	}
 
 	/**

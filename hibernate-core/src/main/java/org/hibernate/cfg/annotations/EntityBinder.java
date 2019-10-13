@@ -29,34 +29,7 @@ import org.hibernate.AnnotationException;
 import org.hibernate.AssertionFailure;
 import org.hibernate.EntityMode;
 import org.hibernate.MappingException;
-import org.hibernate.annotations.BatchSize;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.FetchMode;
-import org.hibernate.annotations.Filter;
-import org.hibernate.annotations.Immutable;
-import org.hibernate.annotations.Loader;
-import org.hibernate.annotations.NaturalIdCache;
-import org.hibernate.annotations.OptimisticLockType;
-import org.hibernate.annotations.OptimisticLocking;
-import org.hibernate.annotations.Persister;
-import org.hibernate.annotations.Polymorphism;
-import org.hibernate.annotations.PolymorphismType;
-import org.hibernate.annotations.Proxy;
-import org.hibernate.annotations.RowId;
-import org.hibernate.annotations.SQLDelete;
-import org.hibernate.annotations.SQLDeleteAll;
-import org.hibernate.annotations.SQLInsert;
-import org.hibernate.annotations.SQLUpdate;
-import org.hibernate.annotations.SelectBeforeUpdate;
-import org.hibernate.annotations.Subselect;
-import org.hibernate.annotations.Synchronize;
-import org.hibernate.annotations.Tables;
-import org.hibernate.annotations.Tuplizer;
-import org.hibernate.annotations.Tuplizers;
-import org.hibernate.annotations.Where;
+import org.hibernate.annotations.*;
 import org.hibernate.annotations.common.reflection.ReflectionManager;
 import org.hibernate.annotations.common.reflection.XAnnotatedElement;
 import org.hibernate.annotations.common.reflection.XClass;
@@ -284,6 +257,12 @@ public class EntityBinder {
 				}
 			}
 			rootClass.setMutable( mutable );
+
+			if(annotatedClass.isAnnotationPresent( ReadOnly.class )) {
+				rootClass.setReadOnly( true );
+				rootClass.setMutable( false );
+			}
+
 			rootClass.setExplicitPolymorphism( isExplicitPolymorphism( polymorphismType ) );
 
 			if ( StringHelper.isNotEmpty( where ) ) {

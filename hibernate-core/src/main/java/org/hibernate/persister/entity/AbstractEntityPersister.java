@@ -4744,6 +4744,10 @@ public abstract class AbstractEntityPersister
 		return entityMetamodel.isMutable();
 	}
 
+	public boolean isReadOnly() {
+		return entityMetamodel.isReadOnly();
+	}
+
 	protected final boolean isModifiableEntity(EntityEntry entry) {
 		return ( entry == null ? isMutable() : entry.isModifiableEntity() );
 	}

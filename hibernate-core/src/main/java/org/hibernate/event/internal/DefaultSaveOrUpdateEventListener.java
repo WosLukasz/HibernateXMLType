@@ -73,6 +73,14 @@ public class DefaultSaveOrUpdateEventListener extends AbstractSaveEventListener 
 			event.setResultId( performSaveOrUpdate( event ) );
 		}
 
+		Object e = event.getEntity();
+
+		EntityPersister persister = event.getSession().getEntityPersister( event.getEntityName(), e );
+
+		if(persister.isReadOnly()) {
+			throw new HibernateException("Entity is read only. Operations save and update are not allowed.");
+		}
+
 	}
 
 	protected boolean reassociateIfUninitializedProxy(Object object, SessionImplementor source) {

@@ -210,6 +210,8 @@ public interface EntityPersister extends EntityDefinition {
 	 */
 	boolean isMutable();
 
+	boolean isReadOnly();
+
 	/**
 	 * Determine whether the entity is inherited one or more other entities.
 	 * In other words, is this entity a subclass of other entities.

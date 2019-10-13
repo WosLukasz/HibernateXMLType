@@ -104,6 +104,7 @@ public class EntityMetamodel implements Serializable {
 	private boolean lazy; //not final because proxy factory creation can fail
 	private final boolean hasCascades;
 	private final boolean mutable;
+	private final boolean readOnly;
 	private final boolean isAbstract;
 	private final boolean selectBeforeUpdate;
 	private final boolean dynamicUpdate;
@@ -319,6 +320,8 @@ public class EntityMetamodel implements Serializable {
 				!ReflectHelper.isFinalClass( persistentClass.getProxyInterface() )
 		);
 		mutable = persistentClass.isMutable();
+		readOnly = persistentClass.isReadOnly();
+
 		if ( persistentClass.isAbstract() == null ) {
 			// legacy behavior (with no abstract attribute specified)
 			isAbstract = persistentClass.hasPojoRepresentation() &&
@@ -1020,4 +1023,10 @@ public class EntityMetamodel implements Serializable {
 	public BytecodeEnhancementMetadata getBytecodeEnhancementMetadata() {
 		return bytecodeEnhancementMetadata;
 	}
+
+	public boolean isReadOnly() {
+		return readOnly;
+	}
+
+
 }

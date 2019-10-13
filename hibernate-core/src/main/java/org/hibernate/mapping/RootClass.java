@@ -43,6 +43,7 @@ public class RootClass extends PersistentClass implements TableOwner {
 
 	private Value discriminator;
 	private boolean mutable = true;
+	private boolean readOnly = false;
 	private boolean embeddedIdentifier;
 	private boolean explicitPolymorphism;
 	private Class entityPersisterClass;
@@ -229,6 +230,14 @@ public class RootClass extends PersistentClass implements TableOwner {
 		this.identifierProperty = identifierProperty;
 		identifierProperty.setPersistentClass( this );
 
+	}
+
+	public boolean isReadOnly() {
+		return readOnly;
+	}
+
+	public void setReadOnly(boolean readOnly) {
+		this.readOnly = readOnly;
 	}
 
 	public void setMutable(boolean mutable) {

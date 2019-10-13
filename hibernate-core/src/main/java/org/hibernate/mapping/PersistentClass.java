@@ -252,6 +252,10 @@ public abstract class PersistentClass implements AttributeContainer, Serializabl
 
 	public abstract boolean isMutable();
 
+	public boolean isReadOnly() {
+		return getRootClass().isReadOnly();
+	}
+
 	public abstract boolean hasIdentifierProperty();
 
 	public abstract Property getIdentifierProperty();

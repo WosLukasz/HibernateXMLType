@@ -697,7 +697,6 @@ public final class SessionImpl
 
 	@Override
 	public Serializable save(Object obj) throws HibernateException {
-		System.out.println("okkkkkkkkkkkkkkkkokokokokok");
 		return save( null, obj );
 	}
 
