@@ -68,6 +68,10 @@ public class Restrictions {
 				: eq( propertyName, value );
 	}
 
+	public static Criterion xPathExists(String propertyName, String xPath) {
+	    return new XPathExistsExpression(propertyName, xPath);
+	}
+
 	/**
 	 * Apply a "not equal" constraint to the named property
 	 *
