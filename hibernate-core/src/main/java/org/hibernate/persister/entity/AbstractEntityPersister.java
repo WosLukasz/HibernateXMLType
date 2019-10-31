@@ -3058,6 +3058,22 @@ public abstract class AbstractEntityPersister
 		}
 	}
 
+	/**
+	 * This function extracts a single object from xml document based on xpath.
+	 * <p/>
+	 * Note: This function supports only few types:
+	 * {@link String} ,
+	 * {@link Integer} ,
+	 * {@link Float} ,
+	 * {@link Double} ,
+	 * {@link Boolean}
+	 *
+	 *
+	 * @param  xmlData  xml document from database
+	 * @param  xPath xpath of object
+	 * @param  finalClass type of object to return
+	 * @return      object with proper type extracted from xml document based on xpath
+	 */
 	private Object getxPathElement(Object xmlData, String xPath, Class finalClass) {
 		Object result = xmlData;
 		if(xmlData instanceof Document) {

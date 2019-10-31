@@ -6,6 +6,11 @@ import org.hibernate.dialect.*;
 import org.hibernate.engine.spi.SessionFactoryImplementor;
 import org.hibernate.engine.spi.TypedValue;
 
+/**
+ * Represents a strategy for checking if xpath expression is true
+ *
+ * @author Lukasz Wos
+ */
 public class XPathExistsExpression implements Criterion {
 
     private final String propertyName;

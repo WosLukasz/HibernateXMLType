@@ -68,6 +68,16 @@ public class Restrictions {
 				: eq( propertyName, value );
 	}
 
+	/**
+	 * Check if xpath query return true
+	 *
+	 * @param propertyName The name of the property
+	 * @param xPath The value of xpath
+	 *
+	 * @return The Criterion
+
+	 * @see XPathExistsExpression
+	 */
 	public static Criterion xPathExists(String propertyName, String xPath) {
 	    return new XPathExistsExpression(propertyName, xPath);
 	}

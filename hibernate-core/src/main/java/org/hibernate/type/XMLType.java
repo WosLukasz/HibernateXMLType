@@ -3,6 +3,11 @@ package org.hibernate.type;
 
 import org.w3c.dom.Document;
 
+/**
+ * A type that maps between {@link java.sql.Types#SQLXML SQLXML} and {@link Document}
+ *
+ * @author Lukasz Wos
+ */
 public class XMLType extends AbstractSingleColumnStandardBasicType<Document> {
     public static final XMLType INSTANCE = new XMLType();
 

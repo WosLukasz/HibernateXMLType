@@ -1,21 +1,14 @@
 package org.hibernate.type.descriptor.java;
 
 import org.hibernate.HibernateException;
-import org.hibernate.internal.SessionImpl;
 import org.hibernate.type.descriptor.WrapperOptions;
-import org.hibernate.type.descriptor.spi.JdbcRecommendedSqlTypeMappingContext;
-import org.hibernate.type.descriptor.sql.SqlTypeDescriptor;
 
-import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.sax.SAXResult;
 import javax.xml.transform.stream.StreamResult;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
-import javax.xml.validation.Validator;
 
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
@@ -26,9 +19,16 @@ import java.io.InputStream;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.sql.SQLXML;
 
+/**
+ * Descriptor for {@link Document} handling.
+ *
+ * @author Lukasz Wos
+
+ * @see org.hibernate.type.descriptor.sql.XMLTypeDescriptor
+ * @see org.hibernate.type.XMLType
+ */
 public class XMLTypeDescriptor extends AbstractTypeDescriptor<Document> {
     public static final XMLTypeDescriptor INSTANCE = new XMLTypeDescriptor();
 

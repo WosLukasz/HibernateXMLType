@@ -3,19 +3,15 @@ package org.hibernate.type.descriptor.sql;
 import org.hibernate.type.descriptor.ValueBinder;
 import org.hibernate.type.descriptor.ValueExtractor;
 import org.hibernate.type.descriptor.WrapperOptions;
-import org.hibernate.type.descriptor.java.BasicJavaDescriptor;
 import org.hibernate.type.descriptor.java.JavaTypeDescriptor;
-import org.hibernate.type.spi.TypeConfiguration;
-import org.w3c.dom.Document;
 
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.sax.SAXResult;
 import java.sql.*;
 
+/**
+ * Descriptor for {@link Types#SQLXML SQLXML} handling.
+ *
+ * @author Lukasz Wos
+ */
 public class XMLTypeDescriptor implements SqlTypeDescriptor {
     public static final XMLTypeDescriptor INSTANCE = new XMLTypeDescriptor();
 
