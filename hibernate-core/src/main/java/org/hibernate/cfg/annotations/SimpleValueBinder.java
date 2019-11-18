@@ -11,18 +11,13 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Properties;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.MapKeyEnumerated;
-import javax.persistence.MapKeyTemporal;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 
 import org.hibernate.AnnotationException;
 import org.hibernate.AssertionFailure;
 import org.hibernate.MappingException;
 import org.hibernate.annotations.*;
+import org.hibernate.annotations.Parameter;
 import org.hibernate.annotations.common.reflection.ClassLoadingException;
 import org.hibernate.annotations.common.reflection.XClass;
 import org.hibernate.annotations.common.reflection.XProperty;
@@ -309,8 +304,10 @@ public class SimpleValueBinder {
 		defaultType = BinderHelper.isEmptyAnnotationValue( type ) ? returnedClassName : type;
 		this.typeParameters = typeParameters;
 
-		if(property.isAnnotationPresent(Id.class) && "org.hibernate.type.XMLType".equals(explicitType)) {
+		if(property.isAnnotationPresent(Id.class) && ("org.hibernate.type.XMLType".equals(explicitType) || ("org.w3c.dom.Document".equals(defaultType) && "".equals(explicitType)))) {
 			throw new MappingException("XML column type cannot be primary key");
+		} else if(property.isAnnotationPresent(JoinColumn.class) && ("org.hibernate.type.XMLType".equals(explicitType) || ("org.w3c.dom.Document".equals(defaultType) && "".equals(explicitType)))) {
+			throw new MappingException("XML column type cannot be foreign key");
 		}
 
 		applyAttributeConverter( property, attributeConverterDescriptor );

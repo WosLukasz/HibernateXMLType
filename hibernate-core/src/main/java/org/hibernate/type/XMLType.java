@@ -16,12 +16,10 @@ public class XMLType extends AbstractSingleColumnStandardBasicType<Document> {
                 org.hibernate.type.descriptor.java.XMLTypeDescriptor.INSTANCE );
     }
 
-    //Uncomment in case if Document type will be used only in XML type mapping
-    // Then you don't need to do "@Type(type="org.hibernate.type.XMLType")"
-//    @Override
-//    public String[] getRegistrationKeys() {
-//        return new String[] { getName(), Document.class.getName() };
-//    }
+    @Override
+    public String[] getRegistrationKeys() {
+        return new String[] { getName(), Document.class.getName() };
+    }
 
     @Override
     public String getName() {
